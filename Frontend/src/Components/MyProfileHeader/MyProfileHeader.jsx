@@ -149,7 +149,7 @@ const MyProfileHeader = ({}) => {
                 <ProfileUserCard
                   userName={item.name}
                   profilePic={item.pic}
-                  address={connectedAccount}
+                  address={item.pubkey}
                   key={i}
                 />
               );
@@ -169,7 +169,7 @@ const MyProfileHeader = ({}) => {
                 <ProfileUserCard
                   userName={item.name}
                   profilePic={item.pic}
-                  address={connectedAccount}
+                  address={item.pubkey}
                   key={i}
                 />
               );

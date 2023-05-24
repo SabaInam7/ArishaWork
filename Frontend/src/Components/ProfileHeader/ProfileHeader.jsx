@@ -37,7 +37,13 @@ const ProfileHeader = ({}) => {
     getMyFollowingsList();
     getFollowersList();
     getMyProfilePost(address);
-  }, [connectedAccount, contract]);
+  }, [
+    connectedAccount,
+    contract,
+    followerListing,
+    followingList,
+    myProfilePosts,
+  ]);
 
   const { username, address } = useParams();
   const getFollowersList = async () => {
@@ -83,7 +89,14 @@ const ProfileHeader = ({}) => {
             <p id="profile-name" className="bold-5 size-l">
               {username}
             </p>
-            <button onClick={handleFollowToggle}>
+            <button
+              onClick={handleFollowToggle}
+              className={
+                connectedAccount.toLowerCase() === address.toLowerCase()
+                  ? "d-none"
+                  : ""
+              }
+            >
               {isFollowingBtn ? "Unfollow" : "Follow"}
             </button>
           </div>
@@ -150,7 +163,7 @@ const ProfileHeader = ({}) => {
                 <ProfileUserCard
                   userName={item.name}
                   profilePic={item.pic}
-                  address={item.address}
+                  address={item.pubkey}
                   key={i}
                 />
               );
@@ -170,7 +183,7 @@ const ProfileHeader = ({}) => {
                 <ProfileUserCard
                   userName={item.name}
                   profilePic={item.pic}
-                  address={item.address}
+                  address={item.pubkey}
                   key={i}
                 />
               );

@@ -14,10 +14,10 @@ const SearchCard = ({
   filterUserAdress,
 }) => {
   const navigate = useNavigate();
-console.log({username});
+  console.log({ username });
   const handleClick = () => {
     navigate(`/profile/${address}/${username}/`);
-    console.log({username});
+    console.log({ username });
   };
 
   return (

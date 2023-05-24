@@ -7,5 +7,14 @@ import Discard from "./Discard/Discard";
 import Loader from "./Loader/Loader";
 import SearchCard from "./SearchCard/SearchCard";
 import MyProfileHeader from "./MyProfileHeader/MyProfileHeader";
-import MyProfilePosts from "./MyProfilePosts/MyProfilePosts";
-export {PostCard, Navbar, ProfileHeader, ProfilePosts, ProfileUserCard, Discard, Loader, SearchCard, MyProfileHeader,MyProfilePosts };
+export {
+  PostCard,
+  Navbar,
+  ProfileHeader,
+  ProfilePosts,
+  ProfileUserCard,
+  Discard,
+  Loader,
+  SearchCard,
+  MyProfileHeader,
+};
